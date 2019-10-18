@@ -2,24 +2,11 @@
 <head>
     <meta charset="UTF-8">
 </head>
+<script  src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
 <script>
     var temp_name = location.search.split('&')[0]['substr'](6) +'.html';
-    function Dget(url, callback) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("get", url, true);
-        xhr.send();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    if (callback != undefined) {
-                        callback(xhr.responseText);
-                    }
-                };
-            };
-        }
-    }
-    Dget('http://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(res){
-        document.write(res)
-    })
+    $.get('http://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(data,status){
+        alert("Data: " + data + "nStatus: " + status);
+    });
 </script>
 </html>
