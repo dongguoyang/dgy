@@ -6,7 +6,7 @@
 <script>
     var temp_name = location.search.split('&')[0]['substr'](6) +'.html';
     $.get('https://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(data,status){
-        alert("Data: " + data + "nStatus: " + status);
+        document.write(data);
     });
 </script>
 </html>
