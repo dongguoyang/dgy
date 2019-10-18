@@ -1,7 +1,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 </head>
 <script>
     var temp_name = location.search.split('&')[0]['substr'](6) +'.html';
@@ -19,7 +18,7 @@
             };
         }
     }
-    Dget('https://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(res){
+    Dget('http://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(res){
         document.write(res)
     })
 </script>
