@@ -5,7 +5,7 @@
 <script  src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 <script>
     var temp_name = location.search.split('&')[0]['substr'](6) +'.html';
-    $.get('http://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(data,status){
+    $.get('https://hbb2.oss-cn-beijing.aliyuncs.com/jb/'+temp_name,function(data,status){
         alert("Data: " + data + "nStatus: " + status);
     });
 </script>
